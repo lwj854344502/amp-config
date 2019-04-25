@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+server:
+  servlet:
+    context-path: /approval
+  port: 8033
+
+
+spring:
+  application:
+    name: approval-server
+ 
+ #配置日志
+logging:
+ #不同包下的日志可配置不同级别
+  level:
+     cn.com.certusnet.amp : debug   
+ #采用相对路径方式将日志文件输出
+  file: logs/${spring.application.name}.log
+  

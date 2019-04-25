@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+server:
+  port: 8087
+spring:
+  application:
+    name: zuul-service
+zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: approval-server
+    api-b:
+      path: /api-b/**
+      serviceId: authentication-server
+      
