@@ -16,7 +16,7 @@ spring:
 logging:
  #不同包下的日志可配置不同级别
   level:
-     cn.com.certusnet.amp : debug   
+     cn.com.nari.amp : debug   
  #采用相对路径方式将日志文件输出
   file: logs/${spring.application.name}.log
   

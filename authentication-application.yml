@@ -41,7 +41,7 @@ eureka:
 # Mybatis配置
 mybatis: 
   mapper-locations: classpath*:mybatisMapper/*.xml
-  type-aliases-package: cn.com.certusnet.cloud.entity
+  type-aliases-package: cn.com.nari.amp.entity
   
 pagehelper:
   helperDialect: mysql
@@ -53,6 +53,6 @@ pagehelper:
 logging:
  #不同包下的日志可配置不同级别
   level:
-     cn.com.certusnet.amp : debug   
+     cn.com.nari.amp : debug   
  #采用相对路径方式将日志文件输出
   file: logs/${spring.application.name}.log
