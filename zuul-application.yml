@@ -18,4 +18,8 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: authentication-server
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
       
