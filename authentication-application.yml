@@ -39,12 +39,12 @@ spring:
     flush-mode: on-save   # Sessions flush mode.
     namespace: spring:session  # Namespace for keys used to store sessions.
     database: 8
-    lettuce:
-      pool:
-        max-active: 8
-        min-idle: 1
-        max-idle: 1
-        max-wait: -1
+#    lettuce:
+#      pool:
+#        max-active: 8
+#        min-idle: 1
+#        max-idle: 1
+#        max-wait: -1
 
 eureka:
   client:
