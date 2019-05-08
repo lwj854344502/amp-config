@@ -2,3 +2,7 @@ server:
   servlet:
     context-path: /message
   port: 8022
+
+spring:
+  application:
+    name: message-server
