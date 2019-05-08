@@ -15,21 +15,21 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
     tomcat:
-      #ÅäÖÃ³õÊ¼»¯´óĞ¡/×îĞ¡/×î´ó
+      #é…ç½®åˆå§‹åŒ–å¤§å°/æœ€å°/æœ€å¤§
       initial-size: 1
       min-idle: 1
       max-active: 20
-      #»ñÈ¡Á¬½ÓµÈ´ı³¬Ê±Ê±¼ä
+      #è·å–è¿æ¥ç­‰å¾…è¶…æ—¶æ—¶é—´
       max-wait: 60000
-      #¼ä¸ô¶à¾Ã½øĞĞÒ»´Î¼ì²â£¬¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó
+      #é—´éš”å¤šä¹…è¿›è¡Œä¸€æ¬¡æ£€æµ‹ï¼Œæ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥
       time-between-eviction-runs-millis: 60000
-      #Ò»¸öÁ¬½ÓÔÚ³ØÖĞ×îĞ¡Éú´æµÄÊ±¼ä
+      #ä¸€ä¸ªè¿æ¥åœ¨æ± ä¸­æœ€å°ç”Ÿå­˜çš„æ—¶é—´
       min-evictable-idle-time-millis: 300000
       validation-query: SELECT 'x'
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
-      #´ò¿ªPSCache£¬²¢Ö¸¶¨Ã¿¸öÁ¬½ÓÉÏPSCacheµÄ´óĞ¡¡£oracleÉèÎªtrue£¬mysqlÉèÎªfalse¡£·Ö¿â·Ö±í½Ï¶àÍÆ¼öÉèÖÃÎªfalse
+      #æ‰“å¼€PSCacheï¼Œå¹¶æŒ‡å®šæ¯ä¸ªè¿æ¥ä¸ŠPSCacheçš„å¤§å°ã€‚oracleè®¾ä¸ºtrueï¼Œmysqlè®¾ä¸ºfalseã€‚åˆ†åº“åˆ†è¡¨è¾ƒå¤šæ¨èè®¾ç½®ä¸ºfalse
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20 
   redis:
@@ -51,7 +51,7 @@ eureka:
     serviceUrl:
       defaultZone: http://172.30.106.138:8090/eureka/
 
-# MybatisÅäÖÃ
+# Mybatisé…ç½®
 mybatis: 
   mapper-locations: classpath*:mybatisMapper/*.xml
   type-aliases-package: cn.com.nari.amp.entity
@@ -62,10 +62,10 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
     
- #ÅäÖÃÈÕÖ¾
+ #é…ç½®æ—¥å¿—
 logging:
- #²»Í¬°üÏÂµÄÈÕÖ¾¿ÉÅäÖÃ²»Í¬¼¶±ğ
+ #ä¸åŒåŒ…ä¸‹çš„æ—¥å¿—å¯é…ç½®ä¸åŒçº§åˆ«
   level:
      cn.com.nari.amp : debug   
- #²ÉÓÃÏà¶ÔÂ·¾¶·½Ê½½«ÈÕÖ¾ÎÄ¼şÊä³ö
+ #é‡‡ç”¨ç›¸å¯¹è·¯å¾„æ–¹å¼å°†æ—¥å¿—æ–‡ä»¶è¾“å‡º
   file: logs/${spring.application.name}.log
