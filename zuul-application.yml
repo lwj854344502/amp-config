@@ -12,14 +12,20 @@ zuul:
     connect-timeout-millis: 60000 #HTTP连接超时要比Hystrix的大
     socket-timeout-millis: 60000   #socket超时
   routes:
-    api-a:
-      path: /api-a/**
-      serviceId: approval-server
-    api-b:
-      path: /api-b/**
+    amp_file:
+      path: /amp_file/**
+      serviceId: file_service
+    amp_approve:
+      path: /amp_approve/**
+      serviceId: amp_arch_review			
+    amp_auth:
+      path: /amp_auth/**
       serviceId: authentication-server
-    api-c:
-      path: /api-c/**
+    amp_contrl:
+      path: /amp_contrl/**
+      serviceId: contrl-server
+    amp_message:
+      path: /amp_message/**
       serviceId: message-server
 
 ribbon:
