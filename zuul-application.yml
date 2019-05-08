@@ -18,6 +18,9 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: authentication-server
+    api-c:
+      path: /api-c/**
+      serviceId: message-server
 
 ribbon:
   ReadTimeout: 60000
