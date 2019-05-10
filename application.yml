@@ -2,7 +2,7 @@ spring:
   datasource:
     name: amp
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.30.106.138:3306/amp?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+    url: jdbc:mysql://172.30.106.138:3306/amp?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
