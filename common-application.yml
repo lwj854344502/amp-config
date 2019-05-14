@@ -41,7 +41,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.30.106.138:8090/eureka/
+      defaultZone: http://localhost:8090/eureka/
 
 # Mybatis配置
 mybatis: 
