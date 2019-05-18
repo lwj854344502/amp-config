@@ -56,6 +56,11 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
   
 sonar:
   ip: http://192.168.79.131:9000
