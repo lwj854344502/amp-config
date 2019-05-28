@@ -2,7 +2,7 @@ spring:
   datasource:
     name: amp
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.30.106.138:3306/amp?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://172.30.107.224:3306/amp?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -25,8 +25,8 @@ spring:
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20 
   redis:
-    host: 172.30.106.138
-    port: 6379 # Redis server port.
+    host: 172.30.107.224
+    port: 6379 # Redis server port
     password: 12345 # Login password of the redis server.
     flush-mode: on-save   # Sessions flush mode.
     namespace: spring:session  # Namespace for keys used to store sessions.
