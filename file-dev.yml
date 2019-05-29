@@ -8,10 +8,10 @@ spring:
     password: amproot
   data:
     mongodb:
-      host: 127.0.0.1
+      host: 192.168.79.137
       port: 27017
       database: sgcc
-      uri: mongodb://localhost:27017/sgcc
+      uri: mongodb://192.168.79.137:27017/sgcc
   servlet:
     multipart:
       maxFileSize: 300MB
