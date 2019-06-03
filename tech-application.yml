@@ -1,16 +1,16 @@
 server:
   servlet:
-    context-path: /sonar
+    context-path: /tech
   port: 8044
 
 
 spring:
   application:
-    name: sonar-server
+    name: tech-server
   datasource:
     name: amp
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://172.30.106.138:3306/sonar?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://172.30.107.224:3306/sonar?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -33,7 +33,7 @@ spring:
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20 
   redis:
-    host: 172.30.106.138
+    host: 172.30.107.224
     port: 6379 # Redis server port.
     password: 12345 # Login password of the redis server.
     flush-mode: on-save   # Sessions flush mode.
@@ -56,6 +56,11 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+#配置日志
+logging:
+  #不同包下的日志可配置不同级别
+  level:
+     cn.com.nari.amp : debug     
 
 eureka:
   client:
@@ -63,4 +68,9 @@ eureka:
       defaultZone: http://localhost:8090/eureka/
   
 sonar:
-  ip: http://192.168.79.131:9000
+  ip: http://192.168.18.128:9000
+  sh: sh /opt/./anogit.sh
+linux:
+  ip: 192.168.18.128
+  userName: root
+  passwd: 123456
